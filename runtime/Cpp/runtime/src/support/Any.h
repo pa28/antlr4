@@ -66,6 +66,18 @@ struct ANTLR4CPP_PUBLIC Any
   }
 
   template<class U>
+  const StorageType<U>& as() const {
+    typedef const StorageType<U> T;
+
+    auto derived = dynamic_cast<Derived<T> const *>(_ptr);
+
+    if (!derived)
+      throw std::bad_cast();
+
+    return derived->value;
+  }
+
+  template<class U>
   operator U() {
     return as<StorageType<U>>();
   }
