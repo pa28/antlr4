@@ -3,6 +3,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
+
 // A standard C++ class loosely modeled after boost::Any.
 
 #pragma once
@@ -14,6 +15,8 @@
   #pragma warning(disable: 4521) // 'antlrcpp::Any': multiple copy constructors specified
 #endif
 
+using antlrcpp::Any = std::any;
+/*
 namespace antlrcpp {
 
 template<class T>
@@ -147,6 +150,7 @@ private:
 
 
 } // namespace antlrcpp
+*/
 
 #ifdef _MSC_VER
 #pragma warning(pop)
