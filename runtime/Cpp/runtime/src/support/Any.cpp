@@ -5,10 +5,10 @@
 
 #include "Any.h"
 
+#if 0
 using namespace antlrcpp;
-/*
 Any::~Any()
 {
     delete _ptr;
 }
-*/
+#endif

@@ -71,7 +71,7 @@ endif()
 
 # Initialize CXXFLAGS.
 if("${CMAKE_VERSION}" VERSION_GREATER 3.1.0)
-  set(CMAKE_CXX_STANDARD 11)
+  set(CMAKE_CXX_STANDARD 17)
   set(CMAKE_CXX_STANDARD_REQUIRED ON)
 else()
   set(CMAKE_CXX_FLAGS                "${CMAKE_CXX_FLAGS} -std=c++11")

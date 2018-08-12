@@ -70,7 +70,8 @@ namespace tree {
     /// </summary>
     /// <returns> The default value returned by visitor methods. </returns>
     virtual antlrcpp::Any defaultResult() {
-      return antlrcpp::Any(); // support isNotNull
+      //return nullptr; // support isNotNull
+      return std::any();
     }
 
     /// <summary>

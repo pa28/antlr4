@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <any>
 #include "antlr4-common.h"
 
 #ifdef _MSC_VER
@@ -15,13 +16,14 @@
   #pragma warning(disable: 4521) // 'antlrcpp::Any': multiple copy constructors specified
 #endif
 
-using antlrcpp::Any = std::any;
-/*
 namespace antlrcpp {
 
 template<class T>
   using StorageType = typename std::decay<T>::type;
 
+using Any = std::any;
+
+#if 0
 struct ANTLR4CPP_PUBLIC Any
 {
   bool isNull() const { return _ptr == nullptr; }
@@ -148,9 +150,8 @@ private:
   Any::Any(std::nullptr_t&& ) : _ptr(nullptr) {
   }
 
-
+#endif
 } // namespace antlrcpp
-*/
 
 #ifdef _MSC_VER
 #pragma warning(pop)
