@@ -94,7 +94,9 @@
 
   #define GUID_LIBUUID
   #if __GNUC__ >= 6
-    #define ANTLR4CPP_PUBLIC __attribute__ ((visibility ("default")))
+    // Eliminate -Wattributes warnings.
+    //#define ANTLR4CPP_PUBLIC __attribute__ ((visibility ("default")))
+    #define ANTLR4CPP_PUBLIC
   #else
     #define ANTLR4CPP_PUBLIC
   #endif
